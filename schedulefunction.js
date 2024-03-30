@@ -16,12 +16,12 @@ function moveItem(){
                 if (ui.helper.data('original')) {
                     // Ha a húzott elem már létezik, akkor nem hozunk létre újat
                     newItem = ui.helper;
-                    console.log('good');
+                    alert('Sikeresen áthelyeztél egy tantárgyat!');
                 }else {
                     // Ha az elem új, akkor klónozzuk és adjunk hozzá egy egyedi azonosítót
                     newItem = ui.helper.clone();
                     newItem.data('original', true);
-                    console.log('másol');
+                    alert('Sikeresen elhelyeztél egy tantárgyat!');
                 }
                 newItem.css({
                     'width': $(this).width() + 25, 
