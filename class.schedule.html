@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Órarend Tervező</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="schedulestyle.css">
+    <style>
+        
+    </style>
+    <script src="schedulefunction.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div class="center">
+        <h1>Órarend tervező</h1>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" id="menubtn" class="btn btn-secondary" onclick="saveSchedule()">Órarend mentése</button>
+            <button type="button" id="menubtn" class="btn btn-secondary" onclick="openScheduleDialog()">Órarend kezelése</button>
+            <button type="button" id="menubtn" class="btn btn-secondary" onclick="clearSchedule()">Tisztítás</button>
+        </div>
+    </div>
+    <dialog id="scheduleDialog">
+        <form method="dialog">
+            <div class="center">
+            <h2 id="dialogTitle">Órarend kezelése</h2>
+                <select id="savedSchedules" class="styled-select"></select> 
+            <menu>
+                <button class="btn btn-secondary" value="cancel">Vissza</button>
+                <button class="btn btn-secondary" value="load" onclick="loadSchedule()">Betöltés</button>
+                <button class="btn btn-secondary" value="delete" onclick="deleteSchedule()">Törlés</button>
+            </menu>
+            </div>
+        </form>
+    </dialog>
+    <div class="container">
+        <div class="subjects-container">
+        <h3>Tantárgyak</h3>
+            <div id="subjects" class="scrollable-list">
+                <ul class="list-group">
+                    <li class="list-group-item draggable">Nyelvtan</li>
+                    <li class="list-group-item draggable">Irodalom</li>
+                    <li class="list-group-item draggable">Történelem</li>
+                    <li class="list-group-item draggable">Matematika</li>
+                    <li class="list-group-item draggable">Angol</li>
+                    <li class="list-group-item draggable">Német</li>
+                    <li class="list-group-item draggable">Fizika</li>
+                    <li class="list-group-item draggable">Kémia</li>
+                    <li class="list-group-item draggable">Biológia</li>
+                    <li class="list-group-item draggable">Informatika</li>
+                    <li class="list-group-item draggable">Rajz</li>
+                    <li class="list-group-item draggable">Osztályfőnöki</li>
+                    <!-- További tantárgyak hozzáadása -->
+                </ul>
+            </div>
+        </div>
+        <table id="schedule" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Időpont</th>
+                    <th class="days">Hétfő</th>
+                    <th class="days">Kedd</th>
+                    <th class="days">Szerda</th>
+                    <th class="days">Csütörtök</th>
+                    <th class="days">Péntek</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time">8:00-8:45</td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                </tr>
+                <tr>
+                    <td class="time">9:00-9:45</td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                </tr>
+                <tr>
+                    <td class="time">10:00-10:45</td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                </tr>
+                <tr>
+                    <td class="time">11:00-11:45</td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                </tr>
+                <tr>
+                    <td class="time">12:00-12:45</td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                </tr>
+                <tr>
+                    <td class="time">13:00-13:45</td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                </tr>
+                <tr>
+                    <td class="time">14:00-14:45</td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                </tr>
+                <tr>
+                    <td class="time">15:00-15:45</td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                    <td class="hour droppable"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+body {
+    background: linear-gradient(to right, grey 8%, white 25%, white 75%, grey 92%);
+    min-width: 1200px;
+}
+
+.draggable { 
+    cursor: move;
+    background-color: #32daf084;
+}
+
+.droppable {
+    position: relative;
+}
+
+h1{
+    margin-top: 30px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/*Mentett órarendek*/
+dialog {
+    border: 5px solid #6c757d;
+    color: black;
+    flex-direction: column;
+}
+
+.styled-select {
+    width: 200px;
+    height: 34px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+#menubtn{
+    width: 150px;
+}
+
+menu {
+    width: 100%;
+    margin-right: 20px;
+}
+
+.btn-group {
+    margin: 20px 0;
+}
+
+button:focus{
+    outline: none;
+}
+
+.btn-secondary{
+    background-color: rgba(16, 197, 229, 0.668);
+    color: black;
+}
+/*Tantárgyak*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 1140px;
+    border: 5px solid #6c757d;
+    padding-top: 10px;
+}
+
+.subjects-container {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-top: 40px;
+}
+
+.scrollable-list {
+    height: 295px;
+    width: 300px;
+    overflow-y: auto;
+}
+
+#subjects {
+    width: 100%;
+}
+
+/*Órarend*/
+.table {
+    width: 100%;
+    margin: 20px 0;
+    margin-top: 40px;
+    background-color: white;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.table th{
+    background-color: rgb(94, 237, 250);
+}
+
+.table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.schedule {
+    display: flex;
+    justify-content: space-between;
+}
+
+#schedule {
+    width: 75%;
+}
+
+.hour {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    min-height: 60px;
+}
+
+.days {
+    width: calc(85% / 5);
+}
+
+.time{
+    background-color: rgba(16, 197, 229, 0.668);
+}
